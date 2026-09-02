@@ -29,31 +29,3 @@ Static HTML/CSS/JS, no build step, no framework. One shared `styles.css` and
   hand-toned to the site's exact green rather than generated at runtime.
   They ship as WebP with a JPEG/PNG fallback via `<picture>`.
 
-## SEO / metadata
-
-Every page carries its own title, description, canonical URL, Open Graph and
-Twitter Card tags, and a shared social preview image
-(`assets/images/og-image.png`). The homepage also carries a small JSON-LD
-`Person` block. `sitemap.xml` and `robots.txt` sit at the repo root and point
-crawlers at all six pages.
-
-## Favicons
-
-`favicon.ico`, `apple-touch-icon.png`, and the sized PNGs in
-`assets/favicons/` are all generated from the same cat photo, composited onto
-a solid dark tile so it reads on both light and dark browser chrome. They're
-referenced as static files rather than swapped in by JavaScript — that JS
-swap was the reason the favicon used to be unreliable in Safari.
-
-## What's still coming
-
-- [ ] Actual writing samples on Curated Collections — right now it's a promise
-- [ ] More entries on Featured Projects beyond The Process Drifts
-
-## Local preview
-
-No build step — just serve the folder and open it:
-
-```
-python3 -m http.server 8000
-```
